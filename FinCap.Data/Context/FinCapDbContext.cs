@@ -20,7 +20,9 @@ namespace FinCap.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UsuarioMap());
-
+            modelBuilder.ApplyConfiguration(new ContaMap());
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
+            modelBuilder.ApplyConfiguration(new TransacaoMap());
             modelBuilder.ApplyGlobalConfiguration();
         }
     }

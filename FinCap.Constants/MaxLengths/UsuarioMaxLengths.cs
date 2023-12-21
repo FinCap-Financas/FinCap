@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fundr.Constants.MaxLengths
+namespace FinCap.Constants.MaxLengths
 {
     public static class UsuarioMaxLengths
     {

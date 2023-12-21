@@ -1,5 +1,5 @@
 ﻿using FinCap.Domain.Entities;
-using Fundr.Constants.MaxLengths;
+using FinCap.Constants.MaxLengths;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -44,9 +44,5 @@ namespace FinCap.Data.Mappings
                 .OnDelete(DeleteBehavior.Restrict);
         }
 
-        public void Teste(Usuario u)
-        {
-            
-        }
     }
 }

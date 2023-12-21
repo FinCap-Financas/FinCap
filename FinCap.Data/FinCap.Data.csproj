@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-    <Folder Include="Queries\" />
+    <Compile Remove="Queries\**" />
+    <Compile Remove="Repositories\**" />
+    <EmbeddedResource Remove="Queries\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="Queries\**" />
+    <None Remove="Repositories\**" />
   </ItemGroup>
 
   <ItemGroup>

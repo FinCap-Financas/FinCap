@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Messages\" />
-    <Folder Include="RegExs\" />
+    <Compile Remove="Messages\**" />
+    <Compile Remove="RegExs\**" />
+    <EmbeddedResource Remove="Messages\**" />
+    <EmbeddedResource Remove="RegExs\**" />
+    <None Remove="Messages\**" />
+    <None Remove="RegExs\**" />
   </ItemGroup>
 
 </Project>

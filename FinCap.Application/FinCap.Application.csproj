@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMapper\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
+    <Compile Remove="AutoMapper\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="ViewModels\**" />
+    <EmbeddedResource Remove="AutoMapper\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="AutoMapper\**" />
+    <None Remove="Services\**" />
+    <None Remove="ViewModels\**" />
   </ItemGroup>
 
 </Project>
