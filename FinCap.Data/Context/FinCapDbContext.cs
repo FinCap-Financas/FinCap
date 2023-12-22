@@ -14,7 +14,7 @@ namespace FinCap.Data.Context
         public DbSet<Conta> Contas { get; set; }
         public DbSet<Transacao> Transacoes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Entidade> Entidade { get; set; }
+    
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

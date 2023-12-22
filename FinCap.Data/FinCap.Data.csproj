@@ -8,11 +8,8 @@
 
   <ItemGroup>
     <Compile Remove="Queries\**" />
-    <Compile Remove="Repositories\**" />
     <EmbeddedResource Remove="Queries\**" />
-    <EmbeddedResource Remove="Repositories\**" />
     <None Remove="Queries\**" />
-    <None Remove="Repositories\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FinCap.Constants\FinCap.Constants.csproj" />
     <ProjectReference Include="..\FinCap.Domain\FinCap.Domain.csproj" />
+    <ProjectReference Include="..\FinCap.Encryption\FinCap.Encryption.csproj" />
   </ItemGroup>
 
 </Project>

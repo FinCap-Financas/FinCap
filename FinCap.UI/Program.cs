@@ -1,3 +1,6 @@
+using FinCap.Data.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace FinCap.UI
 {
     public class Program
@@ -8,7 +11,12 @@ namespace FinCap.UI
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-
+            builder.Services.AddDbContext<FinCapDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("FinCapDB"));
+                options.EnableSensitiveDataLogging();
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
