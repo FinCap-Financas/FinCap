@@ -21,6 +21,12 @@ namespace FinCap.Data.Context
         {
             modelBuilder.ApplyConfiguration(new UsuarioMap());
 
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
+
+            modelBuilder.ApplyConfiguration(new ContaMap());
+
+            modelBuilder.ApplyConfiguration(new TransacaoMap());
+
             modelBuilder.ApplyGlobalConfiguration();
         }
     }

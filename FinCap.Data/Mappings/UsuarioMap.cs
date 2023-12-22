@@ -43,10 +43,5 @@ namespace FinCap.Data.Mappings
                 .HasForeignKey(c => c.UidUsuario)
                 .OnDelete(DeleteBehavior.Restrict);
         }
-
-        public void Teste(Usuario u)
-        {
-            
-        }
     }
 }

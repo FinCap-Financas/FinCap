@@ -28,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FinCap.Constants\FinCap.Constants.csproj" />
     <ProjectReference Include="..\FinCap.Domain\FinCap.Domain.csproj" />
+    <ProjectReference Include="..\FinCap.Encryption\FinCap.Encryption.csproj" />
   </ItemGroup>
 
 </Project>
