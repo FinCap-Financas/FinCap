@@ -26,9 +26,7 @@ namespace FinCap.Data.Mappings
             builder.HasMany(c => c.Transacoes)
                 .WithOne(t => t.Conta)
                 .HasForeignKey(t => t.UidConta)
-                .OnDelete(DeleteBehavior.Restrict);
-                
-                
+                .OnDelete(DeleteBehavior.Restrict);                
         }
     }
 }

@@ -1,4 +1,5 @@
 using FinCap.Data.Context;
+using FinCap.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinCap.UI
@@ -17,6 +18,8 @@ namespace FinCap.UI
                 options.EnableSensitiveDataLogging();
                 options.UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
             });
+
+            builder.Services.AddScoped<RepositoryFactory>();
 
             var app = builder.Build();
 
