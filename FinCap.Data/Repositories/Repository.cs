@@ -6,10 +6,12 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Linq.Expressions;
 using Newtonsoft.Json;
+using FinCap.Domain.Interfaces;
+using System;
 
 namespace FinCap.Data.Repositories
 {
-    public class Repository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly FinCapDbContext _contexto;
 
@@ -127,6 +129,14 @@ namespace FinCap.Data.Repositories
             int save = _contexto.SaveChanges();
             _contexto.ChangeTracker.Clear();
             return save;
+        }
+
+        public void Dispose()
+        {
+            if (_contexto != null)
+                _contexto.Dispose();
+
+            GC.SuppressFinalize(this);
         }
     }
 }

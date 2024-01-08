@@ -8,14 +8,15 @@
 
   <ItemGroup>
     <Compile Remove="AutoMapper\**" />
-    <Compile Remove="Services\**" />
     <Compile Remove="ViewModels\**" />
     <EmbeddedResource Remove="AutoMapper\**" />
-    <EmbeddedResource Remove="Services\**" />
     <EmbeddedResource Remove="ViewModels\**" />
     <None Remove="AutoMapper\**" />
-    <None Remove="Services\**" />
     <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinCap.Domain\FinCap.Domain.csproj" />
   </ItemGroup>
 
 </Project>

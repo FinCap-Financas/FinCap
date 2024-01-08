@@ -4,7 +4,43 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="d-flex align-items-start justify-content-center gap-5">
+    <div class="text-center">
+        <h1 class="display-4">Login</h1>
+        <p>Entre com seu email e senha para utilizar a plataforma.</p>
+        <form method="post" class="container d-flex align-items-center justify-content-center flex-column gap-3">
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" asp-for="@Model.Email" />
+            </div>
+            <div>
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" id="password" class="form-control" asp-for="@Model.Senha" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Fazer login</button>
+            </div>
+        </form>
+    </div>
+    <div class="text-center">
+        <h1 class="display-4">Cadastro</h1>
+        <p>Entre com seu email e senha para utilizar a plataforma.</p>
+        <form asp-page-handler="Cadastro" method="post" class="container d-flex align-items-center justify-content-center flex-column gap-3">
+            <div>
+                <label for="email" class="form-label">Nome</label>
+                <input type="text" id="email" class="form-control" asp-for="@Model.Nome" />
+            </div>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" asp-for="@Model.Email" />
+            </div>
+            <div>
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" id="password" class="form-control" asp-for="@Model.Senha" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Fazer cadastro</button>
+            </div>
+        </form>
+    </div>
 </div>

@@ -28,10 +28,11 @@ namespace FinCap.Data.Mappings
             
             builder.Property(u => u.FotoPerfil)
                 .HasMaxLength(UsuarioMaxLengths.FotoPerfil)
-                .IsRequired();
+                .IsRequired(false);
             
             builder.Property(u => u.DataNascimento)
-                .IsRequired();
+                .IsRequired()
+                .HasDefaultValue(DateTime.MinValue);
 
             builder.HasMany(u => u.Categorias)
                 .WithOne(c => c.Usuario)

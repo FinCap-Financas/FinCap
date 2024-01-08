@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FinCap.Application\FinCap.Application.csproj" />
     <ProjectReference Include="..\FinCap.Data\FinCap.Data.csproj" />
   </ItemGroup>
 

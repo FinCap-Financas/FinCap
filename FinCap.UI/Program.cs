@@ -1,5 +1,8 @@
+using FinCap.Application.Services;
 using FinCap.Data.Context;
 using FinCap.Data.Repositories;
+using FinCap.Domain.Business;
+using FinCap.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace FinCap.UI
@@ -19,7 +22,9 @@ namespace FinCap.UI
                 options.UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
             });
 
-            builder.Services.AddScoped<RepositoryFactory>();
+            builder.Services.AddScoped<IRepositoryFactory, RepositoryFactory>();
+            builder.Services.AddScoped<BusinessFactory>();
+            builder.Services.AddScoped<ServiceFactory>();
 
             var app = builder.Build();
 
