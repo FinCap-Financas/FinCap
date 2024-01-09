@@ -24,5 +24,10 @@ namespace FinCap.Domain.Business
             var novoUsuario = _repository.Create(usuario);
             return novoUsuario;
         }
+
+        public Usuario Get(Guid uid)
+        {
+            return _repository.Find(usuario => usuario.Uid == uid);
+        }
     }
 }

@@ -44,5 +44,10 @@ namespace FinCap.Application.Services
 
             return usuario.Uid;
         }
+
+        public Usuario Get(Guid uidUsuario)
+        {
+            return _business.Usuarios.Get(uidUsuario);
+        }
     }
 }
