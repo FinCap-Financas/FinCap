@@ -21,6 +21,11 @@ namespace FinCap.Application.Services
             _service = service;
         }
 
+        public Usuario Get(Guid uidUsuario)
+        {
+            return _business.Usuarios.Get(uidUsuario);
+        }
+
         public Guid Cadastro(string nome, string email, string senha)
         {
             if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha)) 
@@ -45,9 +50,14 @@ namespace FinCap.Application.Services
             return usuario.Uid;
         }
 
-        public Usuario Get(Guid uidUsuario)
+        public Usuario Login(string email, string senha)
         {
-            return _business.Usuarios.Get(uidUsuario);
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
+            {
+                throw new Exception("Informações faltantes, verifique e tente novamente");
+            }
+
+            return _business.Usuarios.Login(email, senha);
         }
     }
 }

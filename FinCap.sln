@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{83
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{87FC366F-71B2-4048-B15E-7C9BB0BABB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.UI", "FinCap.UI\FinCap.UI.csproj", "{680FD597-50C5-4CEA-AA79-4CB365C55DE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.UI", "FinCap.UI\FinCap.UI.csproj", "{680FD597-50C5-4CEA-AA79-4CB365C55DE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Application", "FinCap.Application\FinCap.Application.csproj", "{816E5FFA-692B-438B-AF6E-14630F188F2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Application", "FinCap.Application\FinCap.Application.csproj", "{816E5FFA-692B-438B-AF6E-14630F188F2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Domain", "FinCap.Domain\FinCap.Domain.csproj", "{7A8DAE32-3EBD-469C-A216-7849E9485B74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Domain", "FinCap.Domain\FinCap.Domain.csproj", "{7A8DAE32-3EBD-469C-A216-7849E9485B74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{EE9D653B-A729-4A5B-88B5-3453A13567E4}"
 EndProject
@@ -23,21 +23,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-Cro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3-Communication", "4.3-Communication", "{93289BEF-E07B-4434-AFBA-B7BC412A1D7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Data", "FinCap.Data\FinCap.Data.csproj", "{6C45A478-241E-4183-893E-881095F839BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Data", "FinCap.Data\FinCap.Data.csproj", "{6C45A478-241E-4183-893E-881095F839BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Mail", "FinCap.Mail\FinCap.Mail.csproj", "{A433B4B7-1ABC-49A2-9F54-2CF684F2F079}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Mail", "FinCap.Mail\FinCap.Mail.csproj", "{A433B4B7-1ABC-49A2-9F54-2CF684F2F079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Auth", "FinCap.Auth\FinCap.Auth.csproj", "{EEFF0C14-E3A7-4E43-83CC-DF27392F7CE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Auth", "FinCap.Auth\FinCap.Auth.csproj", "{EEFF0C14-E3A7-4E43-83CC-DF27392F7CE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.IoC", "FinCap.IoC\FinCap.IoC.csproj", "{71660972-4AA9-4258-A17A-CB61BB6FE8A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.IoC", "FinCap.IoC\FinCap.IoC.csproj", "{71660972-4AA9-4258-A17A-CB61BB6FE8A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Encryption", "FinCap.Encryption\FinCap.Encryption.csproj", "{C0BFB443-5AA2-4E0D-8A23-6E09F3107309}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Encryption", "FinCap.Encryption\FinCap.Encryption.csproj", "{C0BFB443-5AA2-4E0D-8A23-6E09F3107309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Constants", "FinCap.Constants\FinCap.Constants.csproj", "{E6EFFF89-91E2-4438-9030-2B194D48C7E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Constants", "FinCap.Constants\FinCap.Constants.csproj", "{E6EFFF89-91E2-4438-9030-2B194D48C7E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Results", "FinCap.Results\FinCap.Results.csproj", "{33EC318B-281D-484B-A07C-93AB93B59C81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Results", "FinCap.Results\FinCap.Results.csproj", "{33EC318B-281D-484B-A07C-93AB93B59C81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinCap.Tools", "FinCap.Tools\FinCap.Tools.csproj", "{2DBC4833-383A-4CA1-A14F-F978854410C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinCap.Tools", "FinCap.Tools\FinCap.Tools.csproj", "{2DBC4833-383A-4CA1-A14F-F978854410C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,4 +15,8 @@
     <None Remove="Services\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FinCap.Encryption\FinCap.Encryption.csproj" />
+  </ItemGroup>
+
 </Project>

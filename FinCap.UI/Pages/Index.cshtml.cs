@@ -1,4 +1,5 @@
 using FinCap.Application.Services;
+using FinCap.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
@@ -11,10 +12,7 @@ namespace FinCap.UI.Pages
 
         private readonly ServiceFactory _services;
 
-        public IndexModel(ServiceFactory services)
-        {
-            _services = services;
-        }
+        public IndexModel(ServiceFactory services) : base(services) { _services = services; }
 
         [BindProperty]
         public string Email { get; set; }
@@ -37,10 +35,13 @@ namespace FinCap.UI.Pages
 
                 if (EstaLogado())
                     return Redirect("/dashboard");
+
+                return Page();
             }
             catch (Exception ex)
             {
-
+                AdicionaErro(ex.Message);
+                return Page();
             }
         }
 
@@ -48,12 +49,11 @@ namespace FinCap.UI.Pages
         {
             try
             {
-                string usuario = null;
-                //var usuario = _services.Usuarios.FazerLogin(Email, Senha);
+                var usuario = _services.Usuarios.Login(Email, Senha);
 
                 if (usuario is not null)
                 {
-                    TokenLogin = usuario;
+                    TokenLogin = usuario.Uid.ToString();
                     UsuarioLogado = usuario;
 
                     return Redirect("/dashboard");
@@ -63,14 +63,24 @@ namespace FinCap.UI.Pages
             }
             catch (Exception ex)
             {
-                throw;
+                AdicionaErro(ex.Message);
+                return Page();
             }
         }
 
-        public void OnPostCadastro()
+        public IActionResult OnPostCadastro()
         {
-            var usuario = _services.Usuarios.Cadastro(Nome, Email, Senha);
-            Console.WriteLine(JsonConvert.SerializeObject(usuario));
+            try
+            {
+                var usuario = _services.Usuarios.Cadastro(Nome, Email, Senha);
+                AdicionaSucesso("Usuário cadastrado com sucesso!");
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                AdicionaErro(ex.Message);
+                return Page();
+            }
         }
     }
 }

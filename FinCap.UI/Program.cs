@@ -22,9 +22,9 @@ namespace FinCap.UI
                 options.UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
             });
 
+            builder.Services.AddScoped<ServiceFactory>();
             builder.Services.AddScoped<IRepositoryFactory, RepositoryFactory>();
             builder.Services.AddScoped<BusinessFactory>();
-            builder.Services.AddScoped<ServiceFactory>();
 
             var app = builder.Build();
 
@@ -35,6 +35,8 @@ namespace FinCap.UI
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseExceptionHandler("/Error");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

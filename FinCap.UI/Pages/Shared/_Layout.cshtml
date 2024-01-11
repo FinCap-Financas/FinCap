@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@model FinCap.UI.Pages.FinCapPageModel
+@{
+    var sucesso = Model.GetSucesso();
+    var erro = Model.GetErro();
+    var aviso = Model.GetAviso();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,6 +14,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FinCap.UI.styles.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -34,6 +42,23 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+
+        @{
+            if (!string.IsNullOrEmpty(sucesso))
+            {
+                <partial name="shared/Sucesso" model="@(sucesso)" />
+            }
+            
+            if (!string.IsNullOrEmpty(erro))
+            {
+                <partial name="shared/Erro" model="@(erro)" />
+            }
+            
+            if (!string.IsNullOrEmpty(aviso))
+            {
+                <partial name="shared/Aviso" model="@(aviso)" />
+            }
+        }
     </div>
 
     <footer class="border-top footer text-muted">

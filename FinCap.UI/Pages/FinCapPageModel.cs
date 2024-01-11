@@ -18,14 +18,27 @@ namespace FinCap.UI.Pages
         }
 
         private Usuario _usuarioLogado;
+
+        public FinCapPageModel() { }
+
+        public FinCapPageModel(ServiceFactory services)
+        {
+            _services = services;
+        }
+
         public Usuario UsuarioLogado
         {
             get
             {
                 if (_usuarioLogado is null && !string.IsNullOrEmpty(TokenLogin) && Guid.TryParse(TokenLogin, out Guid uidUsuario))
-                    _services.Usuarios.Get(uidUsuario);
+                    _usuarioLogado = _services.Usuarios.Get(uidUsuario);
 
                 return _usuarioLogado;
+            }
+
+            set
+            {
+                _usuarioLogado = value;
             }
         }
 
@@ -37,7 +50,7 @@ namespace FinCap.UI.Pages
         public void DeslogarUsuario()
         {
             _usuarioLogado = null;
-            TokenLogin = null;
+            TokenLogin = string.Empty;
         }
 
         protected abstract bool PrecisaLogar();
